@@ -32,7 +32,7 @@ class AuthenticationService{
 
         var promise = new Promise((resolve, reject)=> {
 
-            if(username === "rahman" && password === "rahman"){
+            if(username === "rahman" && password === "password"){
                 resolve(true);
             }else{
                 resolve(false);
@@ -44,15 +44,16 @@ class AuthenticationService{
 
     async loginAsync(username, password) {
 
-        setTimeout(()=> {
-            if(username === "rahman" && password === "rahman"){
-                return true;
-            }else{
-                return false;
-            }
-        }, 1000)
+        var result = await new Promise(resolve => setTimeout(()=> 
+                        {
+                            if(username === "rahman" && password === "password"){
+                                resolve(true);
+                            }else{
+                                resolve(false);
+                            }
+                        }), 1000);
 
-        return false;      
+        return result;
     }
 
     loginWithInfo(username, password) {
@@ -71,7 +72,7 @@ class Database{
 
     login(username, password){
 
-        if(username === "rahman" && password === "rahman"){
+        if(username === "rahman" && password === "password"){
             let user = new User();
             user.id = 1;
             user.name = "rahman mahmoodi";
@@ -84,7 +85,6 @@ class Database{
 }
 
 class User{
-
     constructor(){
         this.id = 0;
         this.name = "";

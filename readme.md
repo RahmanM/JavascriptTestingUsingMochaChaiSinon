@@ -7,6 +7,13 @@ Steps:
 4- Within package.json set "test": "mocha"
 5- To run tests in command line "npm run test"
 
+NB: important to add this in package.json
+
+"scripts": {
+    "test": "mocha --timeout 10000"
+  }
+
+
 Result:
 
 calculator
