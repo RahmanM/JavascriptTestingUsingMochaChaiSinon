@@ -2,10 +2,10 @@
 
 Steps:
 1. NPM install mocha
-2. NPM install chai
+2. NPM install chai and install Sinon
 3. NPM init to generate the package.json
 4. Within package.json set "test": "mocha"
-5. To run tests in command line "npm run test"
+5. To run tests in command line "npm run test" or using Mocha sidebar by saving the files it will auto-run the tests
 
 NB: important to add this in package.json
 
@@ -31,7 +31,7 @@ calculator
 ```
 
 ## Mocking
-
+using Sinon for mocking and stubbing
 
 ## Code coverage
 
@@ -51,3 +51,4 @@ All files |      100 |      100 |      100 |      100 |                   |
 
 ## Tools
 - Mocha sidebar: https://marketplace.visualstudio.com/items?itemName=maty.vscode-mocha-sidebar
+- NYC
